@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e8ebf4" >
+
+    <!-- title -->
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title_detail" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:layout_centerHorizontal="true"
+        android:padding="5dip"
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/code"
+        android:layout_centerHorizontal="true"
+        android:padding="5dip"
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/item_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="移	动"
+                        android:textColor="#395b88"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/del1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/icon_del" />
+                </RelativeLayout>
+
+                <TableLayout
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动2G900: " />
+
+                        <Spinner
+                            android:id="@+id/yd2g900"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动2G900挂高: " />
+
+                        <EditText
+                            android:id="@+id/yd2g900height"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动2G900平台: " />
+
+                        <Spinner
+                            android:id="@+id/yd2g900pt"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动2G1800: " />
+
+                        <Spinner
+                            android:id="@+id/yd2g1800"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动2G1800挂高: " />
+
+                        <EditText
+                            android:id="@+id/yd2g1800height"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动2G1800平台: " />
+
+                        <Spinner
+                            android:id="@+id/yd2g1800pt"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动3G: " />
+
+                        <Spinner
+                            android:id="@+id/yd3g"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动3G挂高: " />
+
+                        <EditText
+                            android:id="@+id/yd3gheight"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动3G平台: " />
+
+                        <Spinner
+                            android:id="@+id/yd3gpt"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动4G_F: " />
+
+                        <Spinner
+                            android:id="@+id/yd4g"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动4G_F挂高: " />
+
+                        <EditText
+                            android:id="@+id/yd4gheight"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789"
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动4G_F平台: " />
+
+                        <Spinner
+                            android:id="@+id/yd4gpt"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动4G_D: " />
+
+                        <Spinner
+                            android:id="@+id/yd4gD"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动4G_D挂高: " />
+
+                        <EditText
+                            android:id="@+id/yd4gheightD"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789"
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动4G_D平台: " />
+
+                        <Spinner
+                            android:id="@+id/yd4gptD"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="移动机架数: " />
+
+                        <EditText
+                            android:id="@+id/ydjjs"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="电		信"
+                        android:textColor="#395b88"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/del2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/icon_del" />
+                </RelativeLayout>
+
+                <TableLayout
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="电信2G: " />
+
+                        <Spinner
+                            android:id="@+id/dx2g"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="电信2G挂高: " />
+
+                        <EditText
+                            android:id="@+id/dx2gheight"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="电信2G平台: " />
+
+                        <Spinner
+                            android:id="@+id/dx2gpt"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="电信3G:" />
+
+                        <Spinner
+                            android:id="@+id/dx3g"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="电信3G挂高" />
+
+                        <EditText
+                            android:id="@+id/dx3gheight"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="电信3G平台: " />
+
+                        <Spinner
+                            android:id="@+id/dx3gpt"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="电信4G: " />
+
+                        <Spinner
+                            android:id="@+id/dx4g"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="电信4G挂高: " />
+
+                        <EditText
+                            android:id="@+id/dx4gheight"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="电信4G平台: " />
+
+                        <Spinner
+                            android:id="@+id/dx4gpt"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="电信机架数: " />
+
+                        <EditText
+                            android:id="@+id/dxjjs"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="联		通"
+                        android:textColor="#395b88"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/del3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/icon_del" />
+                </RelativeLayout>
+
+                <TableLayout
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通2G900: " />
+
+                        <Spinner
+                            android:id="@+id/lt2g900"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通2G900挂高: " />
+
+                        <EditText
+                            android:id="@+id/lt2g900height"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通2G900平台: " />
+
+                        <Spinner
+                            android:id="@+id/lt2g900pt"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通2G1800: " />
+
+                        <Spinner
+                            android:id="@+id/lt2g1800"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通2G1800挂高: " />
+
+                        <EditText
+                            android:id="@+id/lt2g1800height"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通2G1800平台: " />
+
+                        <Spinner
+                            android:id="@+id/lt2g1800pt"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通3G: " />
+
+                        <Spinner
+                            android:id="@+id/lt3g"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通3G挂高: " />
+
+                        <EditText
+                            android:id="@+id/lt3gheight"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通3G平台: " />
+
+                        <Spinner
+                            android:id="@+id/lt3gpt"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通4G: " />
+
+                        <Spinner
+                            android:id="@+id/lt4g"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通4G挂高: " />
+
+                        <EditText
+                            android:id="@+id/lt4gheight"
+                            style="@style/NormalEdit" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通4G平台: " />
+
+                        <Spinner
+                            android:id="@+id/lt4gpt"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="联通机架数: " />
+
+                        <EditText
+                            android:id="@+id/ltjjs"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/loading" />
+
+</RelativeLayout>

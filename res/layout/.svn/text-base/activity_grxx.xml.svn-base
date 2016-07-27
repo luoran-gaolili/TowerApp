@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e8ebf4" >
+
+    <!-- title -->
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <TableLayout
+                style="@style/NormalTable"
+                android:paddingBottom="5dip" >
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="账号：" />
+
+                    <TextView
+                        android:id="@+id/account"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="姓		名：" />
+
+                    <TextView
+                        android:id="@+id/xm"
+                        style="@style/NormalText"/>
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="单位名称：" />
+
+                    <TextView
+                        android:id="@+id/dwmc"
+                        style="@style/NormalText"/>
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="上次登录时间：" />
+
+                    <TextView
+                        android:id="@+id/dlsj"
+                        style="@style/NormalText" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/loading" />
+
+</RelativeLayout>

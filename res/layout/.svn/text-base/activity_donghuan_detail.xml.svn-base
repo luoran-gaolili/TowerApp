@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e8ebf4" >
+
+    <!-- title -->
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title_detail" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:layout_centerHorizontal="true"
+        android:padding="5dip"
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/code"
+        android:layout_centerHorizontal="true"
+        android:padding="5dip"
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/item_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5dip" >
+
+            <TableLayout
+                style="@style/NormalTable"
+                android:paddingBottom="5dip" >
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="FSU厂家：" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <Spinner
+                            android:id="@+id/jfjg"
+                            style="@style/spinner" />
+
+                        <EditText
+                            android:id="@+id/addtext"
+                            style="@style/NormalEdit"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="FSU型号：" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <Spinner
+                            android:id="@+id/fsu"
+                            style="@style/spinner" />
+
+                        <EditText
+                            android:id="@+id/addtext1"
+                            style="@style/NormalEdit"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </TableRow>
+                
+                            <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="监控主机厂家: " />
+
+                    <Spinner
+                        android:id="@+id/jkzjcj"
+                        style="@style/spinner" />
+                </TableRow>
+                
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="监控主机型号: " />
+
+                    <Spinner
+                        android:id="@+id/jkzjxh"
+                        style="@style/spinner" />
+                </TableRow>
+                
+                 <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="门禁主机厂家: " />
+
+                    <Spinner
+                        android:id="@+id/mjzjcj"
+                        style="@style/spinner" />
+                </TableRow>
+                
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="门禁主机型号: " />
+
+                    <Spinner
+                        android:id="@+id/mjzjxh"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="温湿度传感器: " />
+
+                    <Spinner
+                        android:id="@+id/tem"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="烟感传感器: " />
+
+                    <Spinner
+                        android:id="@+id/yg"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="红外传感器: " />
+
+                    <Spinner
+                        android:id="@+id/hw"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="水浸传感器: " />
+
+                    <Spinner
+                        android:id="@+id/sq"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="灯控传感器: " />
+
+                    <Spinner
+                        android:id="@+id/dk"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="IP网络摄像头: " />
+
+                    <Spinner
+                        android:id="@+id/ip"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="门禁门磁系统: " />
+
+                    <Spinner
+                        android:id="@+id/mj"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="智能电表: " />
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="(独立安装) " />
+                    </LinearLayout>
+
+                    <Spinner
+                        android:id="@+id/zndb"
+                        style="@style/spinner" />
+                </TableRow>
+
+    
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/loading" />
+
+</RelativeLayout>

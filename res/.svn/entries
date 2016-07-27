@@ -1,0 +1,73 @@
+10
+
+dir
+1377
+https://192.168.1.110:8443/svn/towerzj/trunk/%E5%BC%80%E5%8F%91/towerzj_app/res
+https://192.168.1.110:8443/svn/towerzj
+
+
+
+2015-08-27T15:29:00.203125Z
+1375
+mengly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d9fde0ce-6d77-c44c-a380-75ac9731d08d
+
+values-sw720dp-land
+dir
+
+drawable
+dir
+
+drawable-xxhdpi
+dir
+
+anim
+dir
+
+drawable-xhdpi
+dir
+
+values
+dir
+
+xml
+dir
+
+values-sw600dp
+dir
+
+drawable-hdpi
+dir
+
+values-v11
+dir
+
+menu
+dir
+
+values-v14
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+layout
+dir
+

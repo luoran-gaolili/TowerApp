@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:id="@+id/hyfbLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:scrollbars="none" >
+
+        <TableLayout style="@style/NormalTable" >
+
+            <!-- 原密码 -->
+
+            <TableRow
+                style="@style/NormalRow"
+                android:background="@drawable/bottom_line_bg" >
+
+                <TextView
+                    style="@style/NormalTableLable"
+                    android:text="原  密  码：" />
+
+                <EditText
+                    android:id="@+id/ymm"
+                    style="@style/NormalEdit"
+                    android:inputType="textPassword" />
+            </TableRow>
+            <!-- 新密码 -->
+
+            <TableRow
+                style="@style/NormalRow"
+                android:background="@drawable/bottom_line_bg" >
+
+                <TextView
+                    style="@style/NormalTableLable"
+                    android:text="新  密  码：" />
+
+                <EditText
+                    android:id="@+id/xmm"
+                    style="@style/NormalEdit"
+                    android:inputType="textPassword" />
+            </TableRow>
+            <!-- 确认密码 -->
+
+            <TableRow
+                style="@style/NormalRow"
+                android:background="@drawable/bottom_line_bg" >
+
+                <TextView
+                    style="@style/NormalTableLable"
+                    android:text="确认密码：" />
+
+                <EditText
+                    android:id="@+id/qrxmm"
+                    style="@style/NormalEdit"
+                    android:inputType="textPassword" />
+            </TableRow>
+
+            <!-- 显 示 密 码 -->
+
+            <TableRow
+                style="@style/NormalRow"
+                android:background="@drawable/bottom_line_bg" >
+
+                <TextView
+                    style="@style/NormalTableLable"
+                    android:text="显示密码：" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="3dip"
+                    android:paddingTop="3dip" >
+
+                    <Button
+                        android:id="@+id/xsmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pass_false" />
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <include layout="@layout/loading" />
+
+</RelativeLayout>

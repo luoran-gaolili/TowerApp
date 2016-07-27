@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e8ebf4" >
+
+    <!-- title -->
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titleLayout"
+        android:padding="5dip"
+        android:textSize="18sp"
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/code"
+        android:textSize="18sp"
+        android:padding="5dip"
+        android:textColor="#ff0000" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5dip" >
+
+            <TableLayout
+                style="@style/NormalTable"
+                android:paddingBottom="5dip" >
+
+                <TableRow
+                    android:visibility="gone"
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="名		称：" />
+
+                    <EditText
+                        android:id="@+id/zc_mc"
+                        style="@style/NormalEdit" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="品		牌：" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <Spinner
+                            android:id="@+id/pinp"
+                            style="@style/spinner" />
+
+                        <EditText
+                            android:id="@+id/addtext1"
+                            style="@style/NormalEdit"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="容		量：" />
+
+                    <EditText
+                        android:id="@+id/rongl"
+                        style="@style/NormalEdit" />
+                </TableRow>
+
+                <!-- 二维码 -->
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="二维码：" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <EditText
+                            android:id="@+id/qrcode"
+                            style="@style/NormalEdit"
+                            android:layout_width="200dip"
+                            android:editable="false" />
+
+                        <ImageView
+                            android:id="@+id/qrcodeimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="10dip"
+                            android:src="@drawable/icon_qrcode" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/foot"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dip" >
+
+                <Button
+                    android:id="@+id/question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/btn_query"
+                    android:text="问题"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_below="@id/question"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/btn_query"
+                    android:text="保存并继续"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/loading" />
+
+</RelativeLayout>

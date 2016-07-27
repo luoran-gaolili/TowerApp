@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e8ebf4" >
+
+    <!-- title -->
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:layout_centerHorizontal="true"
+        android:padding="5dip"
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/code"
+        android:layout_centerHorizontal="true"
+        android:padding="5dip"
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5dip" >
+
+            <TableLayout
+                style="@style/NormalTable"
+                android:paddingBottom="5dip" >
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="名称：" />
+
+                    <EditText
+                        android:id="@+id/zc_mc"
+                        style="@style/NormalEdit"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="机房类型：" />
+
+                    <Spinner
+                        android:id="@+id/jflx"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="机房结构：" />
+
+                    <Spinner
+                        android:id="@+id/jfjg"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="机房面积：" />
+
+                    <EditText
+                        android:id="@+id/jfmj"
+                        style="@style/NormalEdit"
+                        android:digits="0123456789."
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="电表编号：" />
+                    
+                     <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <EditText
+                            android:id="@+id/dbbh"
+                            style="@style/NormalEdit"
+                            android:layout_width="200dip" />
+
+                        <ImageView
+                            android:id="@+id/dbbhimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="10dip"
+                            android:src="@drawable/photo_bh" />
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="电表数：" />
+
+                    <EditText
+                        android:id="@+id/dbs"
+                        style="@style/NormalEdit"
+                        android:digits="0123456789."
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="机房钥匙：" />
+
+                    <RelativeLayout
+                        android:layout_width="180dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dip" >
+
+                        <RelativeLayout
+                            android:id="@+id/layout01"
+                            android:layout_width="180dip"
+                            android:layout_height="30dip"
+                            android:gravity="center_vertical"  >
+                             <CheckBox
+                                android:id="@+id/jfys_mjk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:button="@drawable/checkboxlist" />
+
+                            <TextView
+                                style="@style/NormalTableLable"
+                                android:layout_toRightOf="@id/jfys_mjk"
+                                android:text="门禁卡" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layout02"
+                            android:layout_width="180dip"
+                            android:layout_height="30dip"
+                            android:layout_below="@id/layout01"
+                            android:gravity="center_vertical"  >
+							 <CheckBox
+                                android:id="@+id/jfys_tyys"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:button="@drawable/checkboxlist" />
+
+                            <TextView
+                                style="@style/NormalTableLable"
+                                android:layout_toRightOf="@id/jfys_tyys"
+                                android:text="通用钥匙" />
+                           
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layout03"
+                            android:layout_width="180dip"
+                            android:layout_height="30dip"
+                            android:layout_below="@id/layout02"
+                            android:gravity="center_vertical">
+
+                            <CheckBox
+                                android:id="@+id/jfys_zyys"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:button="@drawable/checkboxlist" />
+
+                            <TextView
+                                style="@style/NormalTableLable"
+                                android:layout_toRightOf="@id/jfys_zyys"
+                                android:text="专用钥匙" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layout04"
+                            android:layout_width="180dip"
+                            android:layout_height="30dip"
+                            android:layout_below="@id/layout03"
+                            android:gravity="center_vertical" >
+
+                            <CheckBox
+                                android:id="@+id/jfys_wyys"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:button="@drawable/checkboxlist" />
+
+                            <TextView
+                                style="@style/NormalTableLable"
+                                android:layout_toRightOf="@id/jfys_wyys"
+                                android:text="物业钥匙" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="钥匙交接：" />
+
+                    <Spinner
+                        android:id="@+id/ysjj"
+                        style="@style/spinner" />
+                </TableRow>
+                <!-- 二维码 -->
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="二维码：" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <EditText
+                            android:id="@+id/qrcode"
+                            style="@style/NormalEdit"
+                            android:layout_width="200dip"
+                            android:editable="false" />
+
+                        <ImageView
+                            android:id="@+id/qrcodeimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="10dip"
+                            android:src="@drawable/icon_qrcode" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/foot"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dip" >
+
+                <Button
+                    android:id="@+id/question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/btn_query"
+                    android:text="问题"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_below="@id/question"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/btn_query"
+                    android:text="保存并继续"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/loading" />
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <!-- title -->
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title_detail" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:layout_centerHorizontal="true"
+        android:padding="5dip"
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/code"
+        android:layout_centerHorizontal="true"
+        android:padding="5dip"
+       
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/isAdapttv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="划定区域 ( 机房内是否满足20平方空余给铁塔公司用 ) :"
+            android:textColor="#476ca3"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isAdapttv"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+          android:layout_marginLeft="120dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                style="@style/radio"
+                android:text="满足"
+                android:textColor="#476ca3" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                style="@style/radio"
+                 android:checked="true"
+                android:layout_marginLeft="10dip"
+                android:text="不满足"
+                android:textColor="#476ca3" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiogroup"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:numColumns="3"
+        android:stretchMode="columnWidth" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gridView" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <GridView
+                android:id="@+id/scrollgridview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fastScrollEnabled="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:horizontalSpacing="0dp"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                android:stretchMode="spacingWidthUniform"
+                android:verticalSpacing="1dp" >
+            </GridView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- <include layout="@layout/loading" /> -->
+
+</RelativeLayout>

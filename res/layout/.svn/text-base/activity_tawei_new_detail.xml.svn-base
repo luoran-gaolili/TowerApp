@@ -1,0 +1,1411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e8ebf4" >
+
+    <!-- title -->
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title_detail" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:layout_centerHorizontal="true"
+        android:padding="5dip"
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/code"
+        android:layout_centerHorizontal="true"
+        android:padding="5dip"
+        android:textColor="#ff0000"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/scroll_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TableLayout
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            android:id="@+id/tower"
+                            style="@style/NormalText"
+                            android:text="清查数据"
+                            android:textColor="#395b88"
+                            android:textSize="18sp" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="名		称：" />
+
+                        <TextView
+                            android:id="@+id/mc1"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型：" />
+
+                        <Spinner
+                            android:id="@+id/ttlx1"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式：" />
+
+                        <Spinner
+                            android:id="@+id/ttpt1"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔身高度：" />
+
+                        <EditText
+                            android:id="@+id/tg1"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+                    <!-- 二维码 -->
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="二维码：" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/qrcode"
+                                style="@style/NormalEdit"
+                                android:layout_width="150dip"
+                                android:editable="false" />
+
+                            <ImageView
+                                android:id="@+id/qrcodeimg1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="10dip"
+                                android:src="@drawable/icon_qrcode" />
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/lxresult1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:clickable="true"
+                        android:padding="10dip"
+                        android:text="类型"
+                        android:textColor="#ff0000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tgresult1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lxresult1"
+                        android:clickable="true"
+                        android:paddingLeft="10dp"
+                        android:text="塔高"
+                        android:textColor="#ff0000"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/question1"
+                        android:layout_width="80dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/btn_query"
+                        android:text="问题"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/del1"
+                        android:layout_width="80dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/btn_query"
+                        android:text="删除"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TableLayout
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            android:id="@+id/tower1"
+                            style="@style/NormalText"
+                            android:text="清查数据"
+                            android:textColor="#395b88"
+                            android:textSize="18sp" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="名		称：" />
+
+                        <TextView
+                            android:id="@+id/mc2"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型：" />
+
+                        <Spinner
+                            android:id="@+id/ttlx2"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式：" />
+
+                        <Spinner
+                            android:id="@+id/ttpt2"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔身高度：" />
+
+                        <EditText
+                            android:id="@+id/tg2"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+                    <!-- 二维码 -->
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="二维码：" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/qrcode2"
+                                style="@style/NormalEdit"
+                                android:layout_width="150dip"
+                                android:editable="false" />
+
+                            <ImageView
+                                android:id="@+id/qrcodeimg2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="10dip"
+                                android:src="@drawable/icon_qrcode" />
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/lxresult2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:clickable="true"
+                        android:padding="10dip"
+                        android:text="类型"
+                        android:textColor="#ff0000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tgresult2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lxresult2"
+                        android:clickable="true"
+                        android:paddingLeft="10dp"
+                        android:text="塔高"
+                        android:textColor="#ff0000"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip" >
+
+                    <Button
+                        android:id="@+id/question2"
+                        android:layout_width="80dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/btn_query"
+                        android:text="问题"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/del2"
+                        android:layout_width="80dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/btn_query"
+                        android:text="删除"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TableLayout
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            android:id="@+id/tower2"
+                            style="@style/NormalText"
+                            android:text="清查数据"
+                            android:textColor="#395b88"
+                            android:textSize="18sp" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="名		称：" />
+
+                        <TextView
+                            android:id="@+id/mc3"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型：" />
+
+                        <Spinner
+                            android:id="@+id/ttlx3"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式：" />
+
+                        <Spinner
+                            android:id="@+id/ttpt3"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔身高度：" />
+
+                        <EditText
+                            android:id="@+id/tg3"
+                            style="@style/NormalEdit"
+                            android:digits="0123456789."
+                            android:singleLine="true" />
+                    </TableRow>
+                    <!-- 二维码 -->
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="二维码：" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/qrcode3"
+                                style="@style/NormalEdit"
+                                android:layout_width="150dip"
+                                android:editable="false" />
+
+                            <ImageView
+                                android:id="@+id/qrcodeimg3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="10dip"
+                                android:src="@drawable/icon_qrcode" />
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/lxresult3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:clickable="true"
+                        android:padding="10dip"
+                        android:text="类型"
+                        android:textColor="#ff0000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tgresult3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lxresult3"
+                        android:clickable="true"
+                        android:paddingLeft="10dp"
+                        android:text="塔高"
+                        android:textColor="#ff0000"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip" >
+
+                    <Button
+                        android:id="@+id/question3"
+                        android:layout_width="80dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/btn_query"
+                        android:text="问题"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/del3"
+                        android:layout_width="80dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/btn_query"
+                        android:text="删除"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearyys1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TableLayout
+                    android:id="@+id/table_yd1"
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="匹配15表："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/yd_ppsj1"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="设		置："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/yd_sblx1"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/yd_ttxs1"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/yd_ttlx1"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔		高："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/yd_tg1"
+                            style="@style/NormalText"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearyys2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TableLayout
+                    android:id="@+id/table_yd2"
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="匹配15表："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/yd_ppsj2"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="设		置："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/yd_sblx2"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/yd_ttxs2"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/yd_ttlx2"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔		高："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/yd_tg2"
+                            style="@style/NormalText"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearyyd_newadd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/yd_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TableLayout
+                    android:id="@+id/table_yd3"
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="匹配15表："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/yd_ppsj3"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="设		置："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/yd_sblx3"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/yd_ttxs3"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/yd_ttlx3"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔		高："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/yd_tg3"
+                            style="@style/NormalText"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearyys3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TableLayout
+                    android:id="@+id/table_lt1"
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="匹配15表："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/lt_ppsj1"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="设		置："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/lt_sblx1"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/lt_ttxs1"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/lt_ttlx1"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔		高："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/lt_tg1"
+                            style="@style/NormalText"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearyys4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TableLayout
+                    android:id="@+id/table_lt2"
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="匹配15表："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/lt_ppsj2"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="设		置："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/lt_sblx2"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/lt_ttxs2"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/lt_ttlx2"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔		高："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/lt_tg2"
+                            style="@style/NormalText"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearylt_newadd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/lt_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TableLayout
+                    android:id="@+id/table_lt3"
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="匹配15表："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/lt_ppsj3"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="设		置："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/lt_sblx3"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/lt_ttxs3"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/lt_ttlx3"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔		高："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/lt_tg3"
+                            style="@style/NormalText"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearyys5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TableLayout
+                    android:id="@+id/table_dx1"
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="匹配15表："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/dx_ppsj1"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="设		置："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/dx_sblx1"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/dx_ttxs1"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/dx_ttlx1"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔		高："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/dx_tg1"
+                            style="@style/NormalText"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearyys6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TableLayout
+                    android:id="@+id/table_dx2"
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="匹配15表："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/dx_ppsj2"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="设		置："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/dx_sblx2"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/dx_ttxs2"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/dx_ttlx2"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔		高："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/dx_tg2"
+                            style="@style/NormalText"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearydx_newadd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/bg_solid_green"
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/dx_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TableLayout
+                    android:id="@+id/table_dx3"
+                    style="@style/NormalTable"
+                    android:paddingBottom="5dip" >
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="匹配15表："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/dx_ppsj3"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="设		置："
+                            android:textColor="#000000" />
+
+                        <Spinner
+                            android:id="@+id/dx_sblx3"
+                            style="@style/spinner" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔形式："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/dx_ttxs3"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="铁塔类型："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/dx_ttlx3"
+                            style="@style/NormalText" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/NormalRow"
+                        android:background="@drawable/bottom_line_bg" >
+
+                        <TextView
+                            style="@style/NormalTableLable"
+                            android:text="塔		高："
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/dx_tg3"
+                            style="@style/NormalText"
+                            android:singleLine="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/loading" />
+
+</RelativeLayout>

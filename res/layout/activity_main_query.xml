@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8ebf4" >
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:layout_marginTop="40dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5dip" >
+
+            <TableLayout
+                style="@style/NormalTable"
+                android:paddingBottom="5dip" >
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="物理站址编码：" />
+
+                    <EditText
+                        android:id="@+id/wlzd_code"
+                        style="@style/NormalEdit"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="物理站址名称：" />
+
+                    <EditText
+                        android:id="@+id/wlzd_name"
+                        style="@style/NormalEdit"
+                        android:singleLine="true" />
+                </TableRow>
+            </TableLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dip">
+
+                <Button
+                    android:id="@+id/query"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/btn_query"
+                    android:text="查询"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <!-- title -->
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:padding="10dip"
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/code"
+        android:padding="10dip"
+        android:textColor="#ff0000" />
+
+    <ScrollView
+        android:id="@+id/scroll_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5dip" >
+
+            <TableLayout
+                style="@style/NormalTable"
+                android:paddingBottom="5dip" >
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="资产编号：" />
+
+                    <TextView
+                        android:id="@+id/zc_bh"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔形式：" />
+
+                    <Spinner
+                        android:id="@+id/zc_ttxs"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔类型：" />
+
+                    <Spinner
+                        android:id="@+id/zc_ttlx"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="塔		高" />
+
+                    <EditText
+                        android:id="@+id/zc_tg"
+                        style="@style/NormalEdit"
+                        android:singleLine="true" />
+                </TableRow>
+                <!-- 二维码 -->
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="二维码：" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <EditText
+                            android:id="@+id/zc_qrcode"
+                            style="@style/NormalEdit"
+                            android:layout_width="200dip"
+                            android:editable="false" />
+
+                        <ImageView
+                            android:id="@+id/zc_qrcodeimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="10dip"
+                            android:src="@drawable/icon_qrcode" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="3dip"
+                android:padding="3dip"
+                android:textColor="#476ca3" />
+
+            <TextView
+                android:id="@+id/zc_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="中国移动1"
+                android:textColor="#ff0000"
+                android:visibility="gone" />
+
+            <TableLayout
+                android:id="@+id/table_yd1"
+                style="@style/NormalTable"
+                android:paddingBottom="5dip"
+                android:visibility="gone" >
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="资产编号：" />
+
+                    <TextView
+                        android:id="@+id/zc_yd_bh1"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="设备类型：" />
+
+                    <Spinner
+                        android:id="@+id/zc_yd_sblx1"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔形式：" />
+
+                    <TextView
+                        android:id="@+id/zc_yd_ttxs1"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔类型：" />
+
+                    <TextView
+                        android:id="@+id/zc_yd_ttlx1"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="塔		高：" />
+
+                    <TextView
+                        android:id="@+id/zc_yd_tg1"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/zc_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="中国移动2"
+                android:textColor="#ff0000"
+                android:visibility="gone" />
+
+            <TableLayout
+                android:id="@+id/table_yd2"
+                style="@style/NormalTable"
+                android:paddingBottom="5dip"
+                android:visibility="gone" >
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="资产编号：" />
+
+                    <TextView
+                        android:id="@+id/zc_yd_bh2"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="设备类型：" />
+
+                    <Spinner
+                        android:id="@+id/zc_yd_sblx2"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔形式：" />
+
+                    <TextView
+                        android:id="@+id/zc_yd_ttxs2"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔类型：" />
+
+                    <TextView
+                        android:id="@+id/zc_yd_ttlx2"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="塔		高：" />
+
+                    <TextView
+                        android:id="@+id/zc_yd_tg2"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/zc_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="中国联通1"
+                android:textColor="#ff0000"
+                android:visibility="gone" />
+
+            <TableLayout
+                android:id="@+id/table_lt1"
+                style="@style/NormalTable"
+                android:paddingBottom="5dip"
+                android:visibility="gone" >
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="资产编号：" />
+
+                    <TextView
+                        android:id="@+id/zc_lt_bh1"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="设备类型：" />
+
+                    <Spinner
+                        android:id="@+id/zc_lt_sblx1"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔形式：" />
+
+                    <TextView
+                        android:id="@+id/zc_lt_ttxs1"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔类型：" />
+
+                    <TextView
+                        android:id="@+id/zc_lt_ttlx1"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="塔		高：" />
+
+                    <TextView
+                        android:id="@+id/zc_lt_tg1"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/zc_tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="中国联通2"
+                android:textColor="#ff0000"
+                android:visibility="gone" />
+
+            <TableLayout
+                android:id="@+id/table_lt2"
+                style="@style/NormalTable"
+                android:paddingBottom="5dip"
+                android:visibility="gone" >
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="资产编号：" />
+
+                    <TextView
+                        android:id="@+id/zc_lt_bh2"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="设备类型：" />
+
+                    <Spinner
+                        android:id="@+id/zc_lt_sblx2"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔形式：" />
+
+                    <TextView
+                        android:id="@+id/zc_lt_ttxs2"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔类型：" />
+
+                    <TextView
+                        android:id="@+id/zc_lt_ttlx2"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="塔		高：" />
+
+                    <TextView
+                        android:id="@+id/zc_lt_tg2"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/zc_tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="中国电信1"
+                android:textColor="#ff0000"
+                android:visibility="gone" />
+
+            <TableLayout
+                android:id="@+id/table_dx1"
+                style="@style/NormalTable"
+                android:paddingBottom="5dip"
+                android:visibility="gone" >
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="资产编号：" />
+
+                    <TextView
+                        android:id="@+id/zc_dx_bh1"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="设备类型：" />
+
+                    <Spinner
+                        android:id="@+id/zc_dx_sblx1"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔形式：" />
+
+                    <TextView
+                        android:id="@+id/zc_dx_ttxs1"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔类型：" />
+
+                    <TextView
+                        android:id="@+id/zc_dx_ttlx1"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="塔		高：" />
+
+                    <TextView
+                        android:id="@+id/zc_dx_tg1"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/zc_tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="中国电信2"
+                android:textColor="#ff0000"
+                android:visibility="gone" />
+
+            <TableLayout
+                android:id="@+id/table_dx2"
+                style="@style/NormalTable"
+                android:paddingBottom="5dip"
+                android:visibility="gone" >
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="资产编号：" />
+
+                    <TextView
+                        android:id="@+id/zc_dx_bh2"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="设备类型：" />
+
+                    <Spinner
+                        android:id="@+id/zc_dx_sblx2"
+                        style="@style/spinner" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔形式：" />
+
+                    <TextView
+                        android:id="@+id/zc_dx_ttxs2"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="铁塔类型：" />
+
+                    <TextView
+                        android:id="@+id/zc_dx_ttlx2"
+                        style="@style/NormalText" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/NormalRow"
+                    android:background="@drawable/bottom_line_bg" >
+
+                    <TextView
+                        style="@style/NormalTableLable"
+                        android:text="塔		高：" />
+
+                    <TextView
+                        android:id="@+id/zc_dx_tg2"
+                        style="@style/NormalText"
+                        android:singleLine="true" />
+                </TableRow>
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/foot"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dip" >
+
+                <Button
+                    android:id="@+id/question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/btn_query"
+                    android:text="问题"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question"
+                    android:padding="10dip"
+                    android:textColor="#ff0000" />
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_below="@id/result"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/btn_query"
+                    android:text="保存并继续"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/loading" />
+
+</RelativeLayout>

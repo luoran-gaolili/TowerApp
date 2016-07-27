@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <!-- title -->
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title" />
+
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:numColumns="3"
+        android:stretchMode="columnWidth" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gridView" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <GridView
+                android:id="@+id/scrollgridview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fastScrollEnabled="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:horizontalSpacing="0dp"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                android:stretchMode="spacingWidthUniform"
+                android:verticalSpacing="1dp" >
+            </GridView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <include layout="@layout/loading" />
+
+</RelativeLayout>
